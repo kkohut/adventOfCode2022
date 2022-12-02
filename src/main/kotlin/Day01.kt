@@ -1,5 +1,7 @@
+import java.io.File
+
 fun main() {
-    val lines = Utils.readFileInput("inputs/inputDay01")
+    val lines = File("inputs/inputDay01").readLines()
     val subLists = createSubLists(lines)
     val sumOfLargestSubList = subLists.maxOf { it.sum() }
     val sumOf3LargestSubLists = subLists.map { it.sum() }
