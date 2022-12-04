@@ -16,7 +16,7 @@ fun main() {
     println("Puzzle answer to part 2 is ${groupedByBadges.sum()}")
 }
 
-fun toPriority(c: Char): Int {
+private fun toPriority(c: Char): Int {
     val lowerCaseToPriority = ('a'..'z').mapIndexed { index, lc -> lc to (1..26).toList()[index] }.toMap()
     val upperCaseToPriority = ('A'..'Z').mapIndexed { index, uc -> uc to (27..52).toList()[index] }.toMap()
     return lowerCaseToPriority.plus(upperCaseToPriority)[c]!!
